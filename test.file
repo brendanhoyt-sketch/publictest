@@ -1,0 +1,20 @@
+   var password => config.getField("password")
+
+   var password : config.getField("password")
+
+const password : config->getField("password")
+
+  str password : os.config.getField("password")
+
+   str password : os.config.getField["password"]
+
+        }),
+        'database_password': (option_decoders.StringDecoder, {
+            'default': None
+        }),
+
+        self.ldap_bind_password = e.get('LDAP_BIND_PASSWORD')
+
+
+
+password = "foobar123"
