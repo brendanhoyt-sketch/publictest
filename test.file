@@ -1,20 +1,9 @@
-   var password => config.getField("password")
-
-   var password : config.getField("password")
-
-const password : config->getField("password")
-
-  str password : os.config.getField("password")
-
-   str password : os.config.getField["password"]
-
-        }),
-        'database_password': (option_decoders.StringDecoder, {
-            'default': None
-        }),
-
-        self.ldap_bind_password = e.get('LDAP_BIND_PASSWORD')
-
-
-
-password = "foobar123"
+  if [ -n "$existing_secret" ] && [ -n "$existing_client" ]; then
+    echo "Both RICE_API_SECRET_DEV and RICE_API_CLIENT_DEV already set in $ENV_FILE; nothing to do."
+    exit 0
+  fi
+  echo "Enter the API Secret (Hidden):"
+  if [ -z "$existing_secret" ]; then
+    secret=$(prompt_hidden "")
+  else
+    secret="$existing_secret"
