@@ -1,0 +1,8 @@
+    echo "Both RICE_API_SECRET_DEV and RICE_API_CLIENT_DEV already set in $ENV_FILE; nothing to do."
+    exit 0
+  fi
+  echo "Enter the API Secret (Hidden):"
+  if [ -z "$existing_secret" ]; then
+    secret=$(prompt_hidden "")
+  else
+    secret="$existing_secret"
